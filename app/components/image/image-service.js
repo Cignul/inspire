@@ -11,15 +11,16 @@ const imgApi = axios.create({
 export default class ImageService {
 	getImage(callWhenDone) {
 
-
+		let template = ''
 		console.log("Looking for a good pic")
 		imgApi.get()
 			.then(res => {
 				console.log('Image Data:', res.data)
 				callWhenDone(res.data)
 				console.log("THIS IS RES DATA" + res.data)
-
+				template += res.data
 			})
+		document.getElementById("body").innerHTML = template
 	}
 
 }
