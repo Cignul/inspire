@@ -1,0 +1,18 @@
+/* background image css from bootstrap */
+/* import ImageService from "../app/components/image/image-service.js"  idk if i can even import into css*/
+body, html {
+  height: 100%;
+}
+.bg {
+  /* The image used */
+  /* i need to link database image get to put here not sure if i can in css */
+  background-image: url("./lakebackground.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
