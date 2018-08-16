@@ -12,6 +12,7 @@ export default class ImageService {
 	getImage(callWhenDone) {
 
 		let template = ''
+		var element = document.getElementById("body");
 		console.log("Looking for a good pic")
 		imgApi.get()
 			.then(res => {
@@ -19,8 +20,8 @@ export default class ImageService {
 				callWhenDone(res.data)
 				console.log("THIS IS RES DATA" + res.data)
 				template += res.data
+				element.innerHTML = template
 			})
-		document.getElementById("body").innerHTML = template
 	}
 
 }
