@@ -2,15 +2,11 @@
 import ImageService from "./image-service.js"
 let imageService = new ImageService()
 
+console.log(imageService + "this is image service start of controller")
+
 function drawImage() {
 
 }
-
-
-
-
-
-
 
 
 

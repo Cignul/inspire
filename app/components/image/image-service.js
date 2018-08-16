@@ -10,7 +10,7 @@ const imgApi = axios.create({
 
 export default class ImageService {
 	getImage(callWhenDone) {
-		// this.getImage(imgApi)
+
 
 		console.log("Looking for a good pic")
 		imgApi.get()
@@ -18,6 +18,8 @@ export default class ImageService {
 				console.log('Image Data:', res.data)
 				callWhenDone(res.data)
 				console.log("THIS IS RES DATA" + res.data)
+
 			})
 	}
+
 }
