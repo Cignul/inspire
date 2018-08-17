@@ -18,10 +18,8 @@ export default class ImageService {
 				console.log('Image Data:', res.data)
 				callWhenDone(res.data)
 				// console.log("THIS IS RES DATA" + res.data)
-				let imgUrl = res.data.name
-				element.style.backgroundImage = `url(${imgUrl})`
+
 			})
-		return element
 	}
 
 }

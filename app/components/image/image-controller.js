@@ -8,15 +8,19 @@ console.log(imageService + "this is image service start of controller")
 
 
 
-
-
 export default class ImageController {
   //getImage() figure out how to call not doing a dammed thing
   constructor() {
     console.log("is this even doing anyhing?") //yes actually reaching here on page
     //need to figure out what to pass (why is u undefined)
-    console.log(imageService.getImage())
-    imageService.getImage()
-  }
+    console.log(imageService.getImage(Image => {
+      document.getElementById("body").style.backgroundImage = "url(" + Image.url + ")"
 
+    }))
+
+
+
+
+
+  }
 }
