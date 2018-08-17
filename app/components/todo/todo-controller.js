@@ -30,6 +30,7 @@ function draw(todos) {
 export default class TodoController {
 	constructor() {
 		// IF YOU WANT YOUR TODO LIST TO DRAW WHEN THE PAGE FIRST LOADS WHAT SHOULD YOU CALL HERE???
+		draw()
 	}
 	// You will need four methods
 	// getTodos should request your api/todos and give an array of todos to your callback fn
@@ -45,7 +46,15 @@ export default class TodoController {
 		var form = e.target
 		var todo = {
 			// DONT FORGET TO BUILD YOUR TODO OBJECT
-
+			//follow car example it's a bit different though
+			// carService.addCar(formData, drawCars)
+			// formData.reset() slightly diff object
+			//VVVVV first attempt VVVV
+			//todoService.addTodo(form, draw)
+			// formData.reset() slightly diff object
+			//VVVVV second attempt VVVV
+			description: todoService.addTodo(form, draw),
+			completed: form.reset()
 		}
 		//PASSES THE NEW TODO TO YOUR SERVICE
 		//DON'T FORGET TO REDRAW THE SCREEN WITH THE NEW TODO
