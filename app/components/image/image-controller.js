@@ -12,12 +12,8 @@ console.log(imageService + "this is image service start of controller")
 
 export default class ImageController {
   drawImage() {
-    let myImageName = imageService.getImage.name
-    return myImageName
-    console.log(myImageName)
+
   }
 
-  // function() {
 
-  // }
 }

@@ -11,7 +11,6 @@ const imgApi = axios.create({
 export default class ImageService {
 	getImage(callWhenDone) {
 
-		let template = ''
 		var element = document.getElementById("body");
 		console.log("Looking for a good pic")
 		imgApi.get()
@@ -19,8 +18,8 @@ export default class ImageService {
 				console.log('Image Data:', res.data)
 				callWhenDone(res.data)
 				console.log("THIS IS RES DATA" + res.data)
-				template += res.data
-				element.innerHTML = template
+				let imgUrl = res.data.name
+				element.style.backgroundImage = "url('imgUrl')"
 			})
 	}
 
