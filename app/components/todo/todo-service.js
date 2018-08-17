@@ -1,7 +1,10 @@
+import Todo from "../../models/Todo.js";
+
+
 
 
 const todoApi = axios.create({
-	baseURL: 'https://bcw-sandbox.herokuapp.com/api/YOURNAME/todos/',
+	baseURL: 'https://bcw-sandbox.herokuapp.com/api/Jackson/todos/',
 	timeout: 3000
 });
 
@@ -17,22 +20,34 @@ export default class TodoService {
 	getTodos(draw) {
 		console.log("Getting the Todo List")
 		todoApi.get('')
-			.then((res) => { // <-- WHY IS THIS IMPORTANT????
-
+			.then((res) => { // <-- WHY IS THIS IMPORTANT???? to get object from server to then 
+				//manipulate check if this is correct
+				todoList = res.data.data.map(rawTodo => {
+					return new Todo(rawTodo)
+				})
+				//callback function to draw cars
+				draw(todoList)
 			})
 			.catch(logError)
 	}
 
-	addTodo(todo) {
-		// WHAT IS THIS FOR???
-		todoApi.post('', todo)
-			.then(function (res) { // <-- WHAT DO YOU DO AFTER CREATING A NEW TODO?
-
+	addTodo(formData, cb) {
+		// WHAT IS THIS FOR??? add something to the list on the server
+		let newTodo = new Todo({
+			description: formData.description.value,
+			completed: formData.completed.value
+		})
+		todoApi.post('', formData)
+			.then(function (res) { // <-- WHAT DO YOU DO AFTER CREATING A NEW TODO? push it to server and update list
+				console.log(res)
+				console.log("FORM DATA This IS IN THE ADDTODO FUNCTION" + formData)
+				todoList.push(formData)
 			})
 			.catch(logError)
 	}
 
-	toggleTodoStatus(todoId) {
+
+	toggleTodoStatus(todoId, cb) {
 		// MAKE SURE WE THINK THIS ONE THROUGH
 		//STEP 1: Find the todo by its index **HINT** todoList
 

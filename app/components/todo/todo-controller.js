@@ -13,8 +13,17 @@ function getTodos() {
 function draw(todos) {
 	//WHAT IS MY PURPOSE?
 	//BUILD YOUR TODO TEMPLATE HERE
+	//i'm guessing similar to cars / homes arrays
+
 	var template = ''
-	//DONT FORGET TO LOOP
+	for (let i = 0; i < todos.length; i++) {
+		const todo = todos[i];
+		template += '	<form onsubmit=""></form> <p>testing todo template</p>'
+
+
+	}
+	document.getElementById('todo').innerHTML = template
+	//DONT FORGET TO LOOP loop thru
 }
 
 
@@ -36,8 +45,8 @@ export default class TodoController {
 		var form = e.target
 		var todo = {
 			// DONT FORGET TO BUILD YOUR TODO OBJECT
-		}
 
+		}
 		//PASSES THE NEW TODO TO YOUR SERVICE
 		//DON'T FORGET TO REDRAW THE SCREEN WITH THE NEW TODO
 		//YOU SHOULDN'T NEED TO CHANGE THIS
@@ -53,7 +62,7 @@ export default class TodoController {
 
 	removeTodo(todoId) {
 		// ask the service to run the remove todo with this id
-
+		todoService.toggleTodoStatus(todoId, getTodos) //i think the same, since it's boolean
 		// ^^^^ THIS LINE OF CODE PROBABLY LOOKS VERY SIMILAR TO THE toggleTodoStatus
 	}
 
