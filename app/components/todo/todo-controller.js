@@ -15,14 +15,14 @@ function draw(todos) {
 	//BUILD YOUR TODO TEMPLATE HERE
 	//i'm guessing similar to cars / homes arrays
 
-	var template = ''
-	for (let i = 0; i < todos.length; i++) {
-		const todo = todos[i];
-		template += '	<form onsubmit=""></form> <p>testing todo template</p>'
+	// var template = ''
+	// for (let i = 0; i < todos.length; i++) {
+	// 	const todo = todos[i];
+	// 	template += '	<form onsubmit=""></form> <p>testing todo template</p>'
 
 
-	}
-	document.getElementById('todo').innerHTML = template
+	// }
+	// document.getElementById('todo').innerHTML = template
 	//DONT FORGET TO LOOP loop thru
 }
 
@@ -53,8 +53,8 @@ export default class TodoController {
 			//todoService.addTodo(form, draw)
 			// formData.reset() slightly diff object
 			//VVVVV second attempt VVVV
-			description: todoService.addTodo(form, draw),
-			completed: form.reset()
+			description: form.description.value
+
 		}
 		//PASSES THE NEW TODO TO YOUR SERVICE
 		//DON'T FORGET TO REDRAW THE SCREEN WITH THE NEW TODO

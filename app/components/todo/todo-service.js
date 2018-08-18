@@ -31,17 +31,13 @@ export default class TodoService {
 			.catch(logError)
 	}
 
-	addTodo(formData, cb) {
+	addTodo(todo, cb) {
 		// WHAT IS THIS FOR??? add something to the list on the server
-		let newTodo = new Todo({
-			description: formData.description.value,
-			completed: formData.completed.value
-		})
-		todoApi.post('', formData)
+		todoApi.post('', todo)
 			.then(function (res) { // <-- WHAT DO YOU DO AFTER CREATING A NEW TODO? push it to server and update list
 				console.log(res)
-				console.log("FORM DATA This IS IN THE ADDTODO FUNCTION" + formData)
-				todoList.push(formData)
+				console.log("FORM DATA This IS IN THE ADDTODO FUNCTION" + todo)
+				cb()
 			})
 			.catch(logError)
 	}
