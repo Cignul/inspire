@@ -12,5 +12,11 @@ export default class QuoteController {
 		qs.getQuote(function (quote) {
 			console.log('What is the quote', quote)
 		})
+
+		console.log(quote => {
+			document.getElementById("quote").innerHTML = quote
+		})
+
+
 	}
 }
