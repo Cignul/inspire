@@ -5,5 +5,6 @@ export default class Todo {
       this.completed = data.completed //the server will do this for you
       this.user = data.user //the server will do this for you
     }
+
   }
 }

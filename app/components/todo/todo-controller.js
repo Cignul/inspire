@@ -15,15 +15,17 @@ function draw(todos) {
 	//BUILD YOUR TODO TEMPLATE HERE
 	//i'm guessing similar to cars / homes arrays
 
-	// var template = ''
-	// for (let i = 0; i < todos.length; i++) {
-	// 	const todo = todos[i];
-	// 	template += '	<form onsubmit=""></form> <p>testing todo template</p>'
+	var template = ''
+	for (let i = 0; i < todos.length; i++) {
+		const todo = todos[i];
+		template += '	<form onsubmit=""></form> <p>testing todo template</p>'
 
 
-	// }
-	// document.getElementById('todo').innerHTML = template
+	}
+	document.getElementById('todo').innerHTML += template
 	//DONT FORGET TO LOOP loop thru
+
+
 }
 
 
@@ -31,6 +33,7 @@ export default class TodoController {
 	constructor() {
 		// IF YOU WANT YOUR TODO LIST TO DRAW WHEN THE PAGE FIRST LOADS WHAT SHOULD YOU CALL HERE???
 		draw()
+
 	}
 	// You will need four methods
 	// getTodos should request your api/todos and give an array of todos to your callback fn
@@ -56,6 +59,7 @@ export default class TodoController {
 			description: form.description.value
 
 		}
+		getTodos()
 		//PASSES THE NEW TODO TO YOUR SERVICE
 		//DON'T FORGET TO REDRAW THE SCREEN WITH THE NEW TODO
 		//YOU SHOULDN'T NEED TO CHANGE THIS

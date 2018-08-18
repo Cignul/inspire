@@ -25,7 +25,7 @@ export default class TodoService {
 				todoList = res.data.data.map(rawTodo => {
 					return new Todo(rawTodo)
 				})
-				//callback function to draw cars
+				//callback function to draw the todos
 				draw(todoList)
 			})
 			.catch(logError)
@@ -38,8 +38,10 @@ export default class TodoService {
 				console.log(res)
 				console.log("FORM DATA This IS IN THE ADDTODO FUNCTION" + todo)
 				cb()
+
 			})
 			.catch(logError)
+
 	}
 
 
