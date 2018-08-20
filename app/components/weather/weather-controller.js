@@ -8,7 +8,7 @@ function draw(ws) {
 	//trying to get weather
 	//i'm guessing similar to cars / homes arrays
 	//not working but close ( i think)
-	//over riding the todo form though...
+	//returning the wrong values...
 
 	var template3 = `<p>weather: ${weatherService.getWeather}</p>
 									`

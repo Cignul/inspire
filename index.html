@@ -5,13 +5,6 @@
 	<title>Inspire</title>
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
-<div id="todo">
-	<form onsubmit="app.controllers.todoController.addTodoFromForm(event)">
-		<input type="text" name="description">
-	</form>
-	<button onclick="app.controllers.todoController.removeTodo()">delete</button>
-	A Todo List
-</div>
 
 <body id="body" class="bg">
 	<div id="weather">
@@ -22,7 +15,13 @@
 		The Quote
 	</div>
 
-
+	<div id="todo">
+		<form onsubmit="app.controllers.todoController.addTodoFromForm(event)">
+			<input type="text" name="description">
+		</form>
+		<button onclick="app.controllers.todoController.removeTodo()">delete</button>
+		A Todo List
+	</div>
 
 
 
