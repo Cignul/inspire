@@ -11,10 +11,9 @@ function getTodos() {
 }
 
 function draw(todos) {
-	//WHAT IS MY PURPOSE?
-	//BUILD YOUR TODO TEMPLATE HERE
+
 	//i'm guessing similar to cars / homes arrays
-	//not working but close ( i think)
+	//somewhat working, looks ugly thouhgh
 	var template = ''
 	for (let i = 0; i < todos.length; i++) {
 		const todo = todos[i];

@@ -6,6 +6,5 @@ export default class Todo {
       this.user = data.user //the server will do this for you
       this.id = data._id
     }
-
   }
 }
