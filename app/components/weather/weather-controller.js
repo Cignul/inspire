@@ -9,7 +9,8 @@ function draw(ws) {
 	//i'm guessing similar to cars / homes arrays
 	//not working but close ( i think)
 	//returning the wrong values...
-
+	console.log(weatherService.getWeather)
+	//need to get temp out of this not whole weather object
 	var template3 = `<p>weather: ${weatherService.getWeather}</p>
 									`
 
