@@ -7,6 +7,7 @@ function draw(quote) {
 	//trying to get quote to screen
 	//i'm guessing similar to cars / homes arrays
 	//not working but close ( i think)
+	//over riding the todo form though...
 
 	var template2 = `<p>qotd: ${quote.quote}</p>
 									<p> quoteID: ${quote.id}</p>
