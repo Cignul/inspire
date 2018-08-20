@@ -17,13 +17,14 @@ function draw(todos) {
 	var template = ''
 	for (let i = 0; i < todos.length; i++) {
 		const todo = todos[i];
-		template = ` <p> ${todo.description}</p>
+		template += ` <p> ${todo.description}</p>
 								<button onclick="app.controllers.todoController.removeTodo('${todo.id}')">delete</button>
 									<p>ID: ${todo.id}</p>`
 
 
 	}
 	document.getElementById('todo').innerHTML = template
+
 	//DONT FORGET TO LOOP loop thru
 
 
