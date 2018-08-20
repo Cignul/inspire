@@ -14,11 +14,13 @@ function draw(todos) {
 	//WHAT IS MY PURPOSE?
 	//BUILD YOUR TODO TEMPLATE HERE
 	//i'm guessing similar to cars / homes arrays
-
+	//not working but close ( i think)
 	var template = ''
 	for (let i = 0; i < todos.length; i++) {
 		const todo = todos[i];
-		template += '	<form onsubmit=""></form> <p>testing todo template</p>'
+		template += `<p> ${todo.description}</p>
+								<button onclick="app.controllers.todoController.removeTodo('${todo.id}')">delete</button>
+									<p>ID: ${todo.id}</p>`
 
 
 	}
@@ -32,7 +34,7 @@ function draw(todos) {
 export default class TodoController {
 	constructor() {
 		// IF YOU WANT YOUR TODO LIST TO DRAW WHEN THE PAGE FIRST LOADS WHAT SHOULD YOU CALL HERE???
-		draw()
+		getTodos()
 
 	}
 	// You will need four methods
@@ -59,7 +61,7 @@ export default class TodoController {
 			description: form.description.value
 
 		}
-		getTodos()
+
 		//PASSES THE NEW TODO TO YOUR SERVICE
 		//DON'T FORGET TO REDRAW THE SCREEN WITH THE NEW TODO
 		//YOU SHOULDN'T NEED TO CHANGE THIS
@@ -75,7 +77,7 @@ export default class TodoController {
 
 	removeTodo(todoId) {
 		// ask the service to run the remove todo with this id
-		todoService.toggleTodoStatus(todoId, getTodos) //i think the same, since it's boolean
+		todoService.removeTodo()
 		// ^^^^ THIS LINE OF CODE PROBABLY LOOKS VERY SIMILAR TO THE toggleTodoStatus
 	}
 

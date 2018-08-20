@@ -26,6 +26,7 @@ export default class TodoService {
 					return new Todo(rawTodo)
 				})
 				//callback function to draw the todos
+				console.log(todoList)
 				draw(todoList)
 			})
 			.catch(logError)
@@ -48,20 +49,21 @@ export default class TodoService {
 	toggleTodoStatus(todoId, cb) {
 		// MAKE SURE WE THINK THIS ONE THROUGH
 		//STEP 1: Find the todo by its index **HINT** todoList
-
-		var todo = {} ///MODIFY THIS LINE
+		todoId = todoList.findIndex
+		var todo = { todoId } ///MODIFY THIS LINE
 
 		//STEP 2: Change the completed flag to the opposite of what is is **HINT** todo.completed = !todo.completed
 		todoApi.put(todoId, todo)
 			.then(function (res) {
+				todo.completed = !todo.completed
 				//DO YOU WANT TO DO ANYTHING WITH THIS?
 			})
 			.catch(logError)
 	}
 
 	removeTodo() {
-		// Umm this one is on you to write.... The method is a DELETE
-
+		// todoApi.pop()
+		todoList.pop()
 	}
 
 }
