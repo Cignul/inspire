@@ -8,12 +8,13 @@ function draw(quote) {
 	//i'm guessing similar to cars / homes arrays
 	//not working but close ( i think)
 	//over riding the todo form though...
-
+	debugger
 	var template2 = `<p>qotd: ${quote.quote}</p>
 									<p> quoteID: ${quote.id}</p>
 									<p>author: ${quote.author}</p>`
 
 	document.getElementById("quote").innerHTML = template2
+
 }
 export default class QuoteController {
 	constructor() {
