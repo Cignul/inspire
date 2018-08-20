@@ -79,7 +79,4 @@ export default class TodoController {
 		todoService.removeTodo()
 		// ^^^^ THIS LINE OF CODE PROBABLY LOOKS VERY SIMILAR TO THE toggleTodoStatus
 	}
-
-
-
 }
