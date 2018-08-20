@@ -17,13 +17,13 @@ function draw(todos) {
 	var template = ''
 	for (let i = 0; i < todos.length; i++) {
 		const todo = todos[i];
-		template += `<p> ${todo.description}</p>
+		template = ` <p> ${todo.description}</p>
 								<button onclick="app.controllers.todoController.removeTodo('${todo.id}')">delete</button>
 									<p>ID: ${todo.id}</p>`
 
 
 	}
-	document.getElementById('todo').innerHTML += template
+	document.getElementById('todo').innerHTML = template
 	//DONT FORGET TO LOOP loop thru
 
 
@@ -77,12 +77,12 @@ export default class TodoController {
 	removeTodo(todoId) {
 		// ask the service to run the remove todo with this id
 		//remove not working correctly, does call getTodos again though
-		this.removeTodo('https://bcw-sandbox.herokuapp.com/api/YOURNAME/todos/:todoId')
+		todoService.removeTodo(todoId, getTodos)
 		//todoService.removeTodo()
 		//	removeTodo(
 		//return updated list
 
-		getTodos()
+
 		// ^^^^ THIS LINE OF CODE PROBABLY LOOKS VERY SIMILAR TO THE toggleTodoStatus
 	}
 }
