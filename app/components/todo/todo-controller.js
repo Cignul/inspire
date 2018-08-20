@@ -77,9 +77,11 @@ export default class TodoController {
 	removeTodo(todoId) {
 		// ask the service to run the remove todo with this id
 		//remove not working correctly, does call getTodos again though
-		this.removeTodo
+		this.removeTodo('https://bcw-sandbox.herokuapp.com/api/YOURNAME/todos/:todoId')
 		//todoService.removeTodo()
+		//	removeTodo(
 		//return updated list
+
 		getTodos()
 		// ^^^^ THIS LINE OF CODE PROBABLY LOOKS VERY SIMILAR TO THE toggleTodoStatus
 	}

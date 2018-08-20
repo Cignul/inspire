@@ -61,9 +61,10 @@ export default class TodoService {
 			.catch(logError)
 	}
 
-	removeTodo() {
-		// todoApi.pop()
-		todoList.pop()
+	removeTodo(todoId, cb) {
+		todoApi.delete(todoId)
+			.then(cb())
+			.catch(logError)
 	}
 
 }
