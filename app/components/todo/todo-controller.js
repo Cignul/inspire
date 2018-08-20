@@ -14,7 +14,9 @@ function draw(todos) {
 
 	//i'm guessing similar to cars / homes arrays
 	//somewhat working, looks ugly thouhgh
-	var template = ''
+	var template = `<form onsubmit="app.controllers.todoController.addTodoFromForm(event)">
+	<input type="text" name="description">
+</form>`
 	for (let i = 0; i < todos.length; i++) {
 		const todo = todos[i];
 		template += ` <p> ${todo.description}</p>
