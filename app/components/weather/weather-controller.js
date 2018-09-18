@@ -12,7 +12,7 @@ function draw(ws) {
 	//returning the wrong values...
 	console.log(weatherService.getWeather)
 	//need to get temp out of this not whole weather object
-	var template3 = `<p>weather: ${Fahrenheit} degrees F</p>
+	var template3 = `<p class= "textColorWhite textShadow centerText">weather: ${Fahrenheit} degrees F</p>
 									`
 
 	document.getElementById("weather").innerHTML = template3

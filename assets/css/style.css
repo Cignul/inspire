@@ -1,0 +1,15 @@
+.textShadow{ text-shadow: 2px 2px #000000;}
+
+.textColorWhite{color: #ffffff;}
+
+.centerText{
+  text-align: center;
+}
+
+.centerForm{
+  display: inline-block;
+}
+
+.fontSizeBig {
+  font-size:x-large;
+}
