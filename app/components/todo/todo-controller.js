@@ -81,9 +81,7 @@ export default class TodoController {
 		// ask the service to run the remove todo with this id
 		
 		todoService.removeTodo(todoId, getTodos)
-		//todoService.removeTodo()
-		//	removeTodo(
-		//return updated list
+	
 
 
 		// ^^^^ THIS LINE OF CODE PROBABLY LOOKS VERY SIMILAR TO THE toggleTodoStatus

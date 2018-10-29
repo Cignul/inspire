@@ -13,6 +13,9 @@
 .fontSizeBig {
   font-size:x-large;
 }
+
+
+/* added this to try to fix background image */
 .hero-image {
   background-image: url("photographer.jpg"); /* The image used */
   background-color: #cccccc; /* Used if the image is unavailable */
