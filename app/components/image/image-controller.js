@@ -11,6 +11,7 @@ export default class ImageController {
   constructor() {
     console.log("is this even doing anyhing?") 
     //working for now - image is tiling need to fix
+    //looking for where i can style that
     console.log(imageService.getImage(Image => {
       document.getElementById("body").style.backgroundImage = "url(" + Image.url + ")"
 
