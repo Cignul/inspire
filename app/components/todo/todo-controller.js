@@ -79,7 +79,7 @@ export default class TodoController {
 
 	removeTodo(todoId) {
 		// ask the service to run the remove todo with this id
-		//remove not working correctly, does call getTodos again though
+		
 		todoService.removeTodo(todoId, getTodos)
 		//todoService.removeTodo()
 		//	removeTodo(
